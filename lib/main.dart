@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+// import 'package:tac_design_system/tac_design_system.dart';
 
 void main() {
   runApp(const MyApp());
@@ -9,14 +10,20 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    // TacDesignSystem(); // TODO: NOW
+    return const MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Google Drive',
-      theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-        useMaterial3: true,
-      ),
-      home: const MyHomePage(title: 'Google Drive'),
+      // theme: ThemeData(
+      //   colorScheme: ColorScheme.fromSeed(seedColor: Colors.green),
+      //   useMaterial3: true,
+      // ),
+      // darkTheme: ThemeData(
+      //   colorScheme: ColorScheme.fromSeed(seedColor: Colors.red),
+      //   useMaterial3: true,
+      // ),
+      home: MyHomePage(title: 'Google Drive'),
+      themeMode: ThemeMode.dark,
     );
   }
 }
@@ -44,7 +51,7 @@ class _MyHomePageState extends State<MyHomePage> {
         // Icon(Icons.add),
         titleSpacing: 0,
         centerTitle: false,
-        backgroundColor: Theme.of(context).colorScheme.inversePrimary,
+        // backgroundColor: Theme.of(context).colorScheme.inversePrimary,
         title: Text(widget.title),
       ),
       body: Column(
